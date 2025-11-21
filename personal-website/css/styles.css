@@ -1,0 +1,145 @@
+/* Sam Meisner Personal Website | UMD Maroon & Gold Theme */
+:root {
+  --umd-maroon: #7a0019;
+  --umd-gold: #ffcc33;
+  --umd-gray: #f5f5f5;
+  --umd-dark: #222;
+  --header-height: 80px;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--umd-gray);
+  color: var(--umd-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.site-header {
+  background: var(--umd-maroon);
+  color: #fff;
+  padding: 0;
+  min-height: var(--header-height);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.headshot {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--umd-gold);
+  background: #fff;
+}
+.site-header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0 10px;
+  flex: 1;
+}
+.site-header h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 0 0 10px;
+  flex: 2;
+}
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.nav li a {
+  color: #fff;
+  background: var(--umd-maroon);
+  padding: 8px 16px;
+  border-radius: 4px 4px 0 0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.nav li a.active,
+.nav li a:hover {
+  background: var(--umd-gold);
+  color: var(--umd-maroon);
+}
+main {
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 30px 20px;
+}
+.intro video, .hobbies img, section img, section video {
+  display: block;
+  margin: 20px auto;
+  max-width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+.hobby-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hobby {
+  flex: 1 1 180px;
+  text-align: center;
+}
+.hobby img {
+  width: 100px;
+  height: 100px;
+}
+.resume-download {
+  display: inline-block;
+  background: var(--umd-gold);
+  color: var(--umd-maroon);
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 16px 0;
+  transition: background 0.2s, color 0.2s;
+}
+.resume-download:hover {
+  background: var(--umd-maroon);
+  color: #fff;
+}
+.site-footer {
+  background: var(--umd-maroon);
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  margin-top: 40px;
+  border-radius: 0 0 8px 8px;
+}
+.site-footer a {
+  color: var(--umd-gold);
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  .site-header .container, .hobby-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .headshot {
+    margin-bottom: 10px;
+  }
+  main {
+    padding: 16px 4px;
+  }
+}
